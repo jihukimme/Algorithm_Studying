@@ -276,38 +276,38 @@ import java.util.StringTokenizer;
 //    }
 //}
 
-class plus4 {
-    public void plus4() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-//        StringTokenizer st = new StringTokenizer(br.readLine());
-
-        StringBuilder sb = new StringBuilder();
-
-        String str;
-
-        while((str = br.readLine()) != null){
-            StringTokenizer st = new StringTokenizer(str, " ");
-
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-
-            sb.append(a + b);
-            sb.append("\n");
-        }
-
-        bw.write(String.valueOf(sb));
-        bw.flush();
-    }
-}
+//class plus4 {
+//    public void plus4() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+//
+////        StringTokenizer st = new StringTokenizer(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        String str;
+//
+//        while((str = br.readLine()) != null){
+//            StringTokenizer st = new StringTokenizer(str, " ");
+//
+//            int a = Integer.parseInt(st.nextToken());
+//            int b = Integer.parseInt(st.nextToken());
+//
+//            sb.append(a + b);
+//            sb.append("\n");
+//        }
+//
+//        bw.write(String.valueOf(sb));
+//        bw.flush();
+//    }
+//}
 
 public class baekjoonLevel3 {
 
     public static void main(String[] args) throws IOException {
 
-        plus4 plus = new plus4();
-        plus.plus4();
+//        plus4 plus = new plus4();
+//        plus.plus4();
 
     }
 }

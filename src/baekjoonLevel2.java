@@ -103,43 +103,43 @@ import java.util.StringTokenizer;
 //    }
 //}
 
-class dice {
-//    같은 눈이 3개가 나오면 10,000원+(같은 눈)×1,000원의 상금을 받게 된다.
-//    같은 눈이 2개만 나오는 경우에는 1,000원+(같은 눈)×100원의 상금을 받게 된다.
-//    모두 다른 눈이 나오는 경우에는 (그 중 가장 큰 눈)×100원의 상금을 받게 된다.
-    public void dice(int[] arr) {
-        int money;
-        int sameNum;
-        int max = 0;
-
-        for(int i=0; i<3; i++){
-            if(max < arr[i]){
-                max = arr[i];
-            }
-        }
-
-        //같은 눈이 3개 나오면
-        if(arr[0] == arr[1] && arr[0] == arr[2]){
-            sameNum = arr[0];
-            money = 10000 + sameNum * 1000;
-        }
-        //같은 눈이 두개이면
-        else if(arr[0] == arr[1] && arr[0] != arr[2] || arr[0] == arr[2] && arr[0] != arr[1]){
-            sameNum = arr[0];
-            money = 1000 + sameNum * 100;
-        }
-        else if(arr[1] == arr[2] && arr[1] != arr[0]){
-            sameNum = arr[1];
-            money = 1000 + sameNum * 100;
-        }
-        //모두 다른 눈이 나오는 경우
-        else {
-            money = max * 100;
-        }
-
-        System.out.println(money);
-    }
-}
+//class dice {
+////    같은 눈이 3개가 나오면 10,000원+(같은 눈)×1,000원의 상금을 받게 된다.
+////    같은 눈이 2개만 나오는 경우에는 1,000원+(같은 눈)×100원의 상금을 받게 된다.
+////    모두 다른 눈이 나오는 경우에는 (그 중 가장 큰 눈)×100원의 상금을 받게 된다.
+//    public void dice(int[] arr) {
+//        int money;
+//        int sameNum;
+//        int max = 0;
+//
+//        for(int i=0; i<3; i++){
+//            if(max < arr[i]){
+//                max = arr[i];
+//            }
+//        }
+//
+//        //같은 눈이 3개 나오면
+//        if(arr[0] == arr[1] && arr[0] == arr[2]){
+//            sameNum = arr[0];
+//            money = 10000 + sameNum * 1000;
+//        }
+//        //같은 눈이 두개이면
+//        else if(arr[0] == arr[1] && arr[0] != arr[2] || arr[0] == arr[2] && arr[0] != arr[1]){
+//            sameNum = arr[0];
+//            money = 1000 + sameNum * 100;
+//        }
+//        else if(arr[1] == arr[2] && arr[1] != arr[0]){
+//            sameNum = arr[1];
+//            money = 1000 + sameNum * 100;
+//        }
+//        //모두 다른 눈이 나오는 경우
+//        else {
+//            money = max * 100;
+//        }
+//
+//        System.out.println(money);
+//    }
+//}
 
 
 public class baekjoonLevel2 {
@@ -163,17 +163,17 @@ public class baekjoonLevel2 {
 //        ovenAlarm newAlarm = new ovenAlarm();
 //        newAlarm.ovenAlarm(hour, minute, time);
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-
-        int[] arr = new int[3];
-
-        for(int i=0; i<3; i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        dice diceMoney = new dice();
-        diceMoney.dice(arr);
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//        int[] arr = new int[3];
+//
+//        for(int i=0; i<3; i++){
+//            arr[i] = Integer.parseInt(st.nextToken());
+//        }
+//
+//        dice diceMoney = new dice();
+//        diceMoney.dice(arr);
 
 
 

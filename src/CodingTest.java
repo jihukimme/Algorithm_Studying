@@ -914,30 +914,465 @@ import java.util.*;
 //    }
 //}
 
-class sol11727 {
-    public void solution() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//class sol11727 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        //2*n 직사각형을
+//
+//        int[] dp = new int[n+3];
+//        dp[1] = 1;
+//        dp[2] = 3;
+//
+//        for(int i=3; i<=n; i++){
+//            dp[i] = (dp[i-1] + dp[i-2] * 2) % 10007;
+//        }
+//
+//        System.out.println(dp[n]);
+//    }
+//}
 
-        int n = Integer.parseInt(br.readLine());
+//class sol1654 {
+//    public void solution() throws IOException {
+//        //n개의 랜선
+//        //길이가 제각각인 k개의 랜선
+//        //길이가 같은 n개의 랜선을 k개의 랜선을 잘라서 만든다.
+//        //랜선을 자를 때 손실되는 길이가 없다고 가정
+//        //만들 수 있는 최대 랜선의 길이를 구하라
+//
+//        //이미 가지고 있는 랜선 k개
+//        //필요한 랜선의 n개
+//
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//        int k = Integer.parseInt(st.nextToken());
+//        int n = Integer.parseInt(st.nextToken());
+//
+//        int[] arr = new int[k];
+//
+//        long min = 1;
+//        long mid = 0;
+//        long max = 0;
+//
+//        for(int i=0; i<k; i++){
+//            arr[i] = Integer.parseInt(br.readLine());
+//            if(max<arr[i]){
+//                max = arr[i];
+//            }
+//        }
+//
+//        long sum;
+//        while(min<=max){
+//            mid = (min+max)/2;
+//            sum=0;
+//
+//            for(int i=0; i<k; i++) {
+//                sum += arr[i]/mid;
+//            }
+//
+//            if(sum < n) {
+//                max = mid-1;
+//            }
+//            else {
+//                min = mid+1;
+//            }
+//        }
+//
+//        System.out.println(min-1);
+//    }
+//}
 
-        //2*n 직사각형을
+//class sol10989 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        int[] arr = new int[n];
+//
+//        for(int i=0; i<n; i++) {
+//            arr[i] = Integer.parseInt(br.readLine());
+//        }
+//
+////        for(int i=0; i<n; i++){
+////            for(int j=i+1; j<n; j++){
+////                if(arr[i] > arr[j]){
+////                    int tmp;
+////                    tmp = arr[i];
+////                    arr[i] = arr[j];
+////                    arr[j] = tmp;
+////                }
+////            }
+////        }
+//
+//        Arrays.sort(arr);
+//
+//        StringBuilder sb = new StringBuilder();
+//        for(int i=0; i<n; i++){
+//            sb.append(arr[i]).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//}
 
-        int[] dp = new int[n+3];
-        dp[1] = 1;
-        dp[2] = 3;
+//class sol2947 {
+//    public void solution() throws IOException {
+//        //나무조각 1~5
+//        //첫번째수 두번째수
+//        //두번째수 세번째수 ..
+//        //버블 정렬(오름차순)
+//
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        int[] arr = new int[5];
+//
+//        for(int i=0; i<5; i++){
+//            arr[i] = Integer.parseInt(st.nextToken());
+//        }
+//
+//        for(int i=0; i<5; i++){
+//            for(int j=0; j<4; j++){
+//                if(arr[j]>arr[j+1]){
+//                    int tmp;
+//                    tmp = arr[j];
+//                    arr[j] = arr[j+1];
+//                    arr[j+1] = tmp;
+//
+//                    for(int z=0; z<5; z++){
+//                        sb.append(arr[z]).append(" ");
+//                    }
+//                    sb.append("\n");
+//                }
+//            }
+//        }
+//
+//        System.out.println(sb);
+//    }
+//}
 
-        for(int i=3; i<=n; i++){
-            dp[i] = (dp[i-1] + dp[i-2] * 2) % 10007;
-        }
+//class sol1427 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        String s = br.readLine();
+//
+//        Integer[] arr = new Integer[s.length()];
+//
+//        for(int i=0; i<s.length(); i++){
+//            arr[i] = s.charAt(i) - '0';
+//        }
+//
+//        Arrays.sort(arr, Collections.reverseOrder());
+//
+//        StringBuilder sb = new StringBuilder();
+//        for(int i=0; i<s.length(); i++){
+//            sb.append(arr[i]);
+//        }
+//
+//        System.out.println(sb);
+//    }
+//}
 
-        System.out.println(dp[n]);
-    }
-}
+//class sol10814 {
+//    public class person {
+//        int age;
+//        String name;
+//
+//        public person(int age, String name){
+//            this.age = age;
+//            this.name = name;
+//        }
+//    }
+//
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        person[] arr = new person[n];
+//
+//        for(int i=0; i<n; i++){
+//            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//            int age = Integer.parseInt(st.nextToken());
+//            String name = st.nextToken();
+//
+//            person p = new person(age, name);
+//            arr[i] = p;
+//        }
+//
+//        Arrays.sort(arr, new Comparator<person>() {
+//            @Override
+//            public int compare(person p1, person p2) {
+//                return p1.age - p2.age;
+//            }
+//        });
+//
+//        StringBuilder sb = new StringBuilder();
+//        for(int i=0; i<n; i++){
+//            sb.append(arr[i].age + " " + arr[i].name).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//}
+
+//class sol24460 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        int[][] arr = new int[n][n];
+//
+//        for(int i=0; i<n; i++){
+//            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//            for(int j=0; j<n; j++){
+//                arr[i][j] = Integer.parseInt(st.nextToken());
+//            }
+//        }
+//
+//        System.out.println(special(0, 0, n, arr));
+//    }
+//
+//    public int special(int x, int y, int n, int[][] arr) {
+//        if(n==1){
+//            return arr[0][0];
+//        }
+//
+//        if(n==2) {
+//            int[] arr2 = new int[4];
+//            int index=0;
+//            for(int i=0+x; i<n+x; i++){
+//                for(int j=0+y; j<n+y; j++){
+//                    arr2[index++] = arr[i][j];
+//                }
+//            }
+//            Arrays.sort(arr2);
+//
+//            return arr2[1];
+//        }
+//
+//        else {
+//            int[] arr3 = new int[4];
+//
+//            arr3[0] = special(x, y, n/2, arr);
+//            arr3[1] = special(x+n/2, y, n/2, arr);
+//            arr3[2] = special(x, y+n/2, n/2, arr);
+//            arr3[3] = special(x+n/2, y+n/2, n/2, arr);
+//
+//            Arrays.sort(arr3);
+//            return arr3[1];
+//        }
+//    }
+//}
+
+//class sol6603 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringTokenizer st;
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        while(true) {
+//            st = new StringTokenizer(br.readLine(), " ");
+//            int k = Integer.parseInt(st.nextToken());
+//
+//            if(k==0){
+//                break;
+//            }
+//
+//            int[] arr = new int[k];
+//
+//            for(int i=0; i<k; i++){
+//                arr[i] = Integer.parseInt(st.nextToken());
+//            }
+//
+//            boolean[] visited = new boolean[k];
+//
+//            dfs(sb, arr, visited, 0, 0);
+//            sb.append("\n");
+//        }
+//
+//        System.out.print(sb);
+//    }
+//
+//    // DFS로 조합 생성 (6개를 선택하는 경우)
+//    public void dfs(StringBuilder sb, int[] arr, boolean[] visited, int start, int depth) {
+//        if (depth == 6) {  // 6개를 선택한 경우 출력
+//            for (int i = 0; i < arr.length; i++) {
+//                if (visited[i]) {
+//                    sb.append(arr[i]).append(" ");
+//                }
+//            }
+//            sb.append("\n");
+//            return;
+//        }
+//
+//        for (int i = start; i < arr.length; i++) {
+//            visited[i] = true;  // 현재 선택
+//            dfs(sb, arr, visited, i+1, depth+1);  // 다음 인덱스부터 탐색
+//            visited[i] = false;  // 선택 해제 (백트래킹)
+//        }
+//    }
+//}
+
+//class sol6603_2 {
+//
+//    // 백준 6603번에서 숫자의 순서도 고려한 버전
+//
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringTokenizer st;
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        while(true) {
+//            st = new StringTokenizer(br.readLine(), " ");
+//            int k = Integer.parseInt(st.nextToken());
+//
+//            if(k==0){
+//                break;
+//            }
+//
+//            int[] arr = new int[k];
+//
+//            for(int i=0; i<k; i++){
+//                arr[i] = Integer.parseInt(st.nextToken());
+//            }
+//
+//            boolean[] visited = new boolean[k];
+//            int[] selected = new int[6];
+//
+//            //dfs(sb, arr, visited, 0, 0);
+//            dfs(sb, arr, visited, selected, 0);
+//            sb.append("\n");
+//        }
+//
+//        System.out.print(sb);
+//    }
+//
+//    // DFS로 조합 생성 (6개를 선택하는 경우)
+//    public void dfs(StringBuilder sb, int[] arr, boolean[] visited, int[] selected, int depth) {
+//        if (depth == 6) {  // 6개를 선택한 경우 출력
+////            for (int i = 0; i < arr.length; i++) {
+////                if (visited[i]) {
+////                    sb.append(arr[i]).append(" ");
+////                }
+////            }
+//            for(int val : selected){
+//                sb.append(val).append(" ");
+//            }
+//            sb.append("\n");
+//            return;
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if(!visited[i]){
+//                visited[i] = true;  // 현재 선택
+//                selected[depth] = arr[i];
+//                //dfs(sb, arr, visited, i+1, depth+1);  // 다음 인덱스부터 탐색
+//                dfs(sb, arr, visited, selected, depth+1);
+//                visited[i] = false;  // 선택 해제 (백트래킹)
+//            }
+//        }
+//    }
+//}
+
+//class sol27433 {
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        int n = Integer.parseInt(br.readLine());
+//
+//        long result = fact(n);
+//
+//        System.out.println(result);
+//
+//    }
+//
+//    public int fib(int n){
+//        if(n==0 || n==1){
+//            return n;
+//        }
+//        else{
+//            return fib(n-1) + fib(n-2);
+//        }
+//    }
+//
+//    public long fact(int n){
+//        if(n<=0){
+//            return 1;
+//        }
+//        return n * fact(n-1);
+//    }
+//
+//}
+
+
+//class sol15649 {
+//
+//    static int n, m;
+//    static StringBuilder sb;
+//
+//    static boolean[] visited;
+//
+//    static int[] arr;
+//
+//
+//    public void solution() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//        sb = new StringBuilder();
+//
+//        n = Integer.parseInt(st.nextToken()); // 1부터 n까지 자연수
+//        m = Integer.parseInt(st.nextToken()); // 길이가 m인 수열
+//
+//        visited = new boolean[n];
+//        arr = new int[m];
+//
+//        dfs(0);
+//
+//        System.out.println(sb);
+//    }
+//
+//    public void dfs(int depth){
+//
+//        if(depth==m){
+//            for(int val : arr){
+//                sb.append(val).append(" ");
+//            }
+//            sb.append("\n");
+//            return;
+//        }
+//
+//        for(int i=0; i<n; i++){
+//            if(!visited[i]){
+//                visited[i] = true;
+//                arr[depth] = i+1;
+//                dfs(depth+1);
+//                visited[i] = false;
+//            }
+//        }
+//    }
+//}
+
 
 public class CodingTest {
     public static void main(String[] args) throws IOException {
 
-        sol11727 sol = new sol11727();
-        sol.solution();
+//        sol6603_2 sol = new sol6603_2();
+//        sol.solution();
     }
 }

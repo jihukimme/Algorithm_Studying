@@ -131,15 +131,15 @@
 //    }
 //}
 
-class dog {
-    public void dog() {
-        System.out.println("|\\_/|");
-        System.out.println("|q p|   /}");
-        System.out.println("( 0 )\"\"\"\\");
-        System.out.println("|\"^\"`    |");
-        System.out.println("||_/=\\\\__|");
-    }
-}
+//class dog {
+//    public void dog() {
+//        System.out.println("|\\_/|");
+//        System.out.println("|q p|   /}");
+//        System.out.println("( 0 )\"\"\"\\");
+//        System.out.println("|\"^\"`    |");
+//        System.out.println("||_/=\\\\__|");
+//    }
+//}
 
 //class 정렬 {
 //    public void 정렬() {
@@ -175,8 +175,8 @@ public class baekjoonLevel1 {
 
     public static void main(String[] args) {
 
-       dog dog = new dog();
-            dog.dog();
+//       dog dog = new dog();
+//            dog.dog();
 
     }
 }
