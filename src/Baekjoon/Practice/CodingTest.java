@@ -1,5 +1,6 @@
+package Baekjoon.Practice;
+
 import java.io.*;
-import java.util.*;
 
 //class IOControll {
 //    //이놈들을 사용하는 이유 : 데이터를 buffer라는 임시 메모리에 저장한 후 한번에 읽어 속도가 빠름(성능이 개선 됨)
@@ -46,7 +47,7 @@ import java.util.*;
 //
 //}
 
-//class sol23971 {
+//class Sol23971 {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 //        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -75,7 +76,7 @@ import java.util.*;
 ////        System.out.println(sb);
 //}
 
-//class sol5073 {
+//class Sol5073 {
 //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 ////        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -119,7 +120,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol2292 {
+//class Sol2292 {
 //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 //    StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -148,7 +149,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol1157 {
+//class Sol1157 {
 //    // 대소문자 단어 -> 가장 많이 사용된 알파벳 알아내기(대문자와 소문자를 구분하지 않는다.)
 //    // 대문자 아스키코드 + 32 = 소문자 아스키코드
 //
@@ -185,7 +186,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol11723 {
+//class Sol11723 {
 //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 ////       StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -256,7 +257,7 @@ import java.util.*;
 //
 //}
 
-//class sol9655 {
+//class Sol9655 {
 //    // 돌 N개, 2명의 player, 턴을 돌아가며 1개 또는 3개의 돌을 가져감.
 //    // 마지막 돌을 가져가는 사람이 승리
 //
@@ -278,7 +279,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol10431 {
+//class Sol10431 {
 //
 //    // 키 순서로 번호 부여(작은 순으로), 항상 20명, 같은 키x,
 //    // 정렬 방법 : 아무나 한명을 맨 앞에 세운다. -> 그 다음부터 학생을 계속 맨 뒤에 세운다. ->
@@ -340,7 +341,7 @@ import java.util.*;
 //
 //}
 
-//class sol8979 {
+//class Sol8979 {
 //    // 국가 : 1~n 사이 정수로 표현,
 //    // 등수는 자신보다 더 잘한 나라수 + 1
 //    // 금, 은, 동 메달 수 같다면 같은 등수
@@ -399,7 +400,7 @@ import java.util.*;
 //
 //}
 
-//class sol7568 {
+//class Sol7568 {
 //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 //    StringBuilder sb = new StringBuilder();
@@ -433,7 +434,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol4659 {
+//class Sol4659 {
 //    // acceptable, not acceptable
 //    // 모음(a,e,i,o,u) 중 하나를 반드시 포함
 //    // 모음이 3개, 또는 자음이 3개 연속으로 오면 안된다.
@@ -499,7 +500,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol25757 {
+//class Sol25757 {
 //// 윷놀이Y(2명), 그림찾기F(3명), 원카드O(4명)
 //    //플레이 신청 횟수 N
 //    //한번 같이 플레이한 사람과는 다시 플레이하지 않는다.
@@ -536,7 +537,7 @@ import java.util.*;
 //        System.out.println(playCount);
 //}
 
-//class sol20125 {
+//class Sol20125 {
 //
 //    public void solve() throws IOException {
 //        //쿠키 신체 측정
@@ -642,7 +643,7 @@ import java.util.*;
 //
 //}
 
-//class sol1205 {
+//class Sol1205 {
 //    // 등수 구하기
 //    // 등수 : 위에서 볓 번째 점수인지(같은 점수 있으면 동점)
 //    // 만약 점수가 리스트에 올라갈 수 없다면 -1을 출력
@@ -703,7 +704,7 @@ import java.util.*;
 //}
 
 
-//class sol1244 {
+//class Sol1244 {
 //    // 스위치 켜고 끄기
 //    // 스위치 개수
 //    // 1은 켜짐, 0은 꺼짐
@@ -774,7 +775,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol18870 {
+//class Sol18870 {
 //    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
 //    int n = Integer.parseInt(br.readLine());
@@ -809,7 +810,7 @@ import java.util.*;
 //        System.out.println(sb);
 //}
 
-//class sol2167{
+//class Sol2167{
 //    public void solution() throws IOException {
 //        //n행 m열의 2차원 배열
 //        //2차원 배열을 입력받고,
@@ -855,7 +856,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol17478 {
+//class Sol17478 {
 //    public void solution() throws IOException {
 //        //재귀함수 : 자기 자신을 호출하는 함수
 //
@@ -889,7 +890,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol10870 {
+//class Sol10870 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -914,7 +915,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol11727 {
+//class Sol11727 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -934,7 +935,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol1654 {
+//class Sol1654 {
 //    public void solution() throws IOException {
 //        //n개의 랜선
 //        //길이가 제각각인 k개의 랜선
@@ -985,7 +986,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol10989 {
+//class Sol10989 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -1019,7 +1020,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol2947 {
+//class Sol2947 {
 //    public void solution() throws IOException {
 //        //나무조각 1~5
 //        //첫번째수 두번째수
@@ -1058,7 +1059,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol1427 {
+//class Sol1427 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -1081,7 +1082,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol10814 {
+//class Sol10814 {
 //    public class person {
 //        int age;
 //        String name;
@@ -1124,7 +1125,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol24460 {
+//class Sol24460 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -1174,7 +1175,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol6603 {
+//class Sol6603 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -1225,7 +1226,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol6603_2 {
+//class Sol6603_2 {
 //
 //    // 백준 6603번에서 숫자의 순서도 고려한 버전
 //
@@ -1288,7 +1289,7 @@ import java.util.*;
 //    }
 //}
 
-//class sol27433 {
+//class Sol27433 {
 //    public void solution() throws IOException {
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //
@@ -1319,7 +1320,7 @@ import java.util.*;
 //}
 
 
-//class sol15649 {
+//class Sol15649 {
 //
 //    static int n, m;
 //    static StringBuilder sb;
@@ -1372,7 +1373,7 @@ import java.util.*;
 public class CodingTest {
     public static void main(String[] args) throws IOException {
 
-//        sol6603_2 sol = new sol6603_2();
-//        sol.solution();
+//        Sol6603_2 sol = new Sol6603_2();
+//        Sol.solution();
     }
 }
