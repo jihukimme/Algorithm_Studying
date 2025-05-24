@@ -950,8 +950,627 @@ package SWEA.Practice;// for SWEA
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-public class Solution {
-    public static void main(String[] args) throws Exception {
+/////////////////////////////////////////////////////////////////////////////////////////////
+////23005
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//
+//class Solution
+//{
+//    public static void main(String args[]) throws Exception
+//    {
+//        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//        int T=Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for(int test_case = 1; test_case <= T; test_case++)
+//        {
+//            String s =  br.readLine();
+//            sb.append(minInsertPalindrom(s)).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    static int minInsertPalindrom(String s) {
+//        int left = 0;
+//        int right = s.length()-1;
+//        int count = 0;
+//
+//        while(left<right) {
+//            char l = s.charAt(left);
+//            char r = s.charAt(right);
+//
+//            if(l==r) {
+//                left++;
+//                right--;
+//            }
+//            else if(l=='x'){
+//                left++;
+//                count++;
+//            }
+//            else if(r=='x'){
+//                right--;
+//                count++;
+//            }
+//            else {
+//                return -1;
+//            }
+//        }
+//
+//        return count;
+//    }
+//}
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1204 - 배열
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//
+//class Solution {
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            int n = Integer.parseInt(br.readLine());
+//
+//            String numberStr = br.readLine();
+//
+//            String[] strArr = numberStr.split(" ");
+//
+//            int[] score = new int[101];
+//
+//            int maxFrequencyScore = getMaxFrequencyScore(strArr, score);
+//
+//            sb.append("#").append(n).append(" ").append(maxFrequencyScore).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    static int getMaxFrequencyScore(String[] strArr, int[] score) {
+//        for(String s : strArr){
+//            int n = Integer.parseInt(s);
+//
+//            score[n]++;
+//        }
+//
+//        int maxFreq = 0;
+//        for(int i=0; i<score.length; i++){
+//            if(maxFreq < score[i]){
+//                maxFreq = score[i];
+//            }
+//        }
+//
+//        for(int i=score.length-1; i>=0; i--){
+//            if(maxFreq == score[i]){
+//                return i;
+//            }
+//        }
+//
+//        return -1;
+//    }
+//}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1204 - Map
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.HashMap;
+//import java.util.Map;
+//
+//class Solution {
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            int n = Integer.parseInt(br.readLine());
+//
+//            String numberStr = br.readLine();
+//
+//            String[] strArr = numberStr.split(" ");
+//
+//            int maxFrequencyScore = getMaxFrequencyScore(strArr);
+//
+//            sb.append("#").append(n).append(" ").append(maxFrequencyScore).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    static int getMaxFrequencyScore(String[] strArr) {
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//
+//        for(String s : strArr) {
+//            int score = Integer.parseInt(s);
+//
+//            map.put(score, map.getOrDefault(score, 0) + 1);
+//        }
+//
+//        int maxFreq = 0;
+//
+//        for(int freq : map.values()) {
+//            if(freq > maxFreq) {
+//                maxFreq = freq;
+//            }
+//        }
+//
+//        int maxScore = 0;
+//
+//        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//            int score = entry.getKey();
+//            int freq = entry.getValue();
+//
+//            if(freq == maxFreq && score > maxScore) {
+//                maxScore = score;
+//            }
+//        }
+//
+//        return maxScore;
+//    }
+//}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1206
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.StringTokenizer;
+//
+//class Solution {
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= 10; test_case++) {
+//            int n = Integer.parseInt(br.readLine());
+//            int[] arr = new int[n];
+//
+//            StringTokenizer st = new StringTokenizer(br.readLine());
+//
+//            for (int i = 0; i < n; i++) {
+//                arr[i] = Integer.parseInt(st.nextToken());
+//            }
+//
+//            int count = getCount(arr);
+//            sb.append("#").append(test_case).append(" ").append(count).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    static int getCount(int[] arr){
+//        int count = 0;
+//
+//        for(int i = 2; i < arr.length-2; i++){
+//            int left = i-2;
+//            int right = i+2;
+//
+//            int maxHigh = 0;
+//            boolean isView = false;
+//
+//            while(left < i && right > i){
+//                if(arr[i] <= arr[right] || arr[i] <= arr[left]){
+//                    maxHigh = 0;
+//                    isView = false;
+//                    break;
+//                }
+//                else {
+//                    isView = true;
+//                    maxHigh = Math.max(maxHigh, Math.max(arr[left], arr[right]));
+//                }
+//
+//                left++;
+//                right--;
+//            }
+//
+//            if(isView) {
+//                count += arr[i]-maxHigh;
+//            }
+//        }
+//
+//        return count;
+//    }
+//}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////2056
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//
+//class Solution {
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            String s = br.readLine();
+//
+//            String strYear = s.substring(0, 4);
+//            String strMonth = s.substring(4, 6);
+//            String strDay = s.substring(6);
+//
+//            String dateFormat = "";
+//
+//            sb.append("#").append(test_case).append(" ");
+//
+//            if(!isAvailabelDate(strMonth, strDay)) {
+//                sb.append(-1).append("\n");
+//            }
+//            else{
+//                dateFormat = strYear + "/" + strMonth + "/" + strDay;
+//                sb.append(dateFormat).append("\n");
+//            }
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    public static boolean isAvailabelDate(String strMonth, String strDay) {
+//        int month = Integer.parseInt(strMonth);
+//        int day = Integer.parseInt(strDay);
+//
+//        if(month < 1 || month > 12){
+//            return false;
+//        }
+//        else {
+//            if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+//                if(day < 1 || day > 31){
+//                    return false;
+//                }
+//            }
+//            else if(month == 2){
+//                if(day < 1 || day > 28){
+//                    return false;
+//                }
+//            }
+//            else if(month == 4 || month == 6 || month == 9 || month == 11){
+//                if(day < 1 || day > 30){
+//                    return false;
+//                }
+//            }
+//        }
+//
+//        return true;
+//    }
+//}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1244 - list
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.HashSet;
+//import java.util.StringTokenizer;
+//
+//class Solution {
+//
+//    static ArrayList<Integer> list = new ArrayList<>();
+//
+//
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//            String numberStr = st.nextToken();
+//            int swapCount = Integer.parseInt(st.nextToken());
+//
+//            dfs(numberStr, swapCount, 0);
+//
+//            Collections.sort(list, Collections.reverseOrder());
+//
+//            sb.append("#").append(test_case).append(" ").append(list.get(0)).append("\n");
+//
+//            list.clear();
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    public static void dfs(String numberStr, int swapCount, int depth){
+//        if(depth == swapCount){
+//            list.add(Integer.parseInt(numberStr));
+//            return;
+//        }
+//
+//        for(int i=0; i<numberStr.length()-1; i++){
+//            int index1 = i;
+//            for(int j=i+1; j<numberStr.length(); j++){
+//                int index2 = j;
+//                String newNumberStr = swap(numberStr, index1, index2);
+//                dfs(newNumberStr, swapCount, depth+1);
+//            }
+//        }
+//    }
+//
+//    public static String swap(String numberStr, int index1, int index2){
+//        StringBuilder sb = new StringBuilder(numberStr);
+//
+//        sb.setCharAt(index1, numberStr.charAt(index2));
+//        sb.setCharAt(index2, numberStr.charAt(index1));
+//
+//        return sb.toString();
+//    }
+//}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1244 - int max
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.HashSet;
+//import java.util.StringTokenizer;
+//
+//class Solution {
+//
+//    static int max;
+//
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//            String numberStr = st.nextToken();
+//            int swapCount = Integer.parseInt(st.nextToken());
+//
+//            max = 0;
+//            dfs(numberStr, swapCount, 0);
+//
+//            sb.append("#").append(test_case).append(" ").append(max).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    public static void dfs(String numberStr, int swapCount, int depth){
+//        if(depth == swapCount){
+//            max = Math.max(max, Integer.parseInt(numberStr));
+//            return;
+//        }
+//
+//        for(int i=0; i<numberStr.length()-1; i++){
+//            int index1 = i;
+//            for(int j=i+1; j<numberStr.length(); j++){
+//                int index2 = j;
+//                String newNumberStr = swap(numberStr, index1, index2);
+//                dfs(newNumberStr, swapCount, depth+1);
+//            }
+//        }
+//    }
+//
+//    public static String swap(String numberStr, int index1, int index2){
+//        StringBuilder sb = new StringBuilder(numberStr);
+//
+//        sb.setCharAt(index1, numberStr.charAt(index2));
+//        sb.setCharAt(index2, numberStr.charAt(index1));
+//
+//        return sb.toString();
+//    }
+//}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1244 - set
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.HashSet;
+//import java.util.StringTokenizer;
+//
+//class Solution {
+//
+//    static HashSet<String> set = new HashSet<>();
+//
+//    static int max;
+//
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = Integer.parseInt(br.readLine());
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+//
+//            String numberStr = st.nextToken();
+//            int swapCount = Integer.parseInt(st.nextToken());
+//
+//            max = 0;
+//            dfs(numberStr, swapCount, 0);
+//
+//            sb.append("#").append(test_case).append(" ").append(max).append("\n");
+//
+//            //list.clear();
+//            set.clear();
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    public static void dfs(String numberStr, int swapCount, int depth){
+//        if(depth == swapCount){
+//            max = Math.max(max, Integer.parseInt(numberStr));
+//            return;
+//        }
+//
+//        String setItem = numberStr + depth;
+//
+//        if(set.contains(setItem)){
+//            return;
+//        }
+//        set.add(setItem);
+//
+//        for(int i=0; i<numberStr.length()-1; i++){
+//            int index1 = i;
+//            for(int j=i+1; j<numberStr.length(); j++){
+//                int index2 = j;
+//                String newNumberStr = swap(numberStr, index1, index2);
+//                dfs(newNumberStr, swapCount, depth+1);
+//            }
+//        }
+//    }
+//
+//    public static String swap(String numberStr, int index1, int index2){
+//        StringBuilder sb = new StringBuilder(numberStr);
+//
+//        sb.setCharAt(index1, numberStr.charAt(index2));
+//        sb.setCharAt(index2, numberStr.charAt(index1));
+//
+//        return sb.toString();
+//    }
+//}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1208
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.util.Arrays;
+//
+//class Solution {
+//    public static void main(String args[]) throws Exception {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int T = 10;
+//
+//        StringBuilder sb = new StringBuilder();
+//
+//        for (int test_case = 1; test_case <= T; test_case++) {
+//            int dumpCount = Integer.parseInt(br.readLine());
+//            String str = br.readLine();
+//            String[] strArr = str.split(" ");
+//
+//            int[] arr = new int[strArr.length];
+//
+//            for(int i=0;i<strArr.length;i++){
+//                arr[i] = Integer.parseInt(strArr[i]);
+//            }
+//
+//            int value = dump(arr, dumpCount);
+//
+//            sb.append("#").append(test_case).append(" ").append(value).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//    }
+//
+//    public static int dump(int[] arr, int dumpCount) {
+//        while(dumpCount > 0){
+//            Arrays.sort(arr);
+//
+//            int maxHeigh = arr[arr.length-1];
+//            int minHeigh = arr[0];
+//
+//            arr[0] = minHeigh+1;
+//            arr[arr.length-1] = maxHeigh-1;
+//
+//            dumpCount--;
+//        }
+//
+//        Arrays.sort(arr);
+//
+//        return arr[arr.length-1] - arr[0];
+//    }
+//}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////1208
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class Solution {
+
+    static int[] arr;
+    static int count;
+
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int test_case = 1; test_case <= T; test_case++) {
+            int N = Integer.parseInt(br.readLine());
+
+            arr = new int[N];
+            count = 0;
+
+            dfs(0);
+            sb.append("#").append(test_case).append(" ").append(count).append("\n");
+        }
+
+        System.out.println(sb);
+    }
+
+    public static void dfs(int depth) {
+        if(depth == arr.length) {
+            count++;
+            return;
+        }
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[depth] = i;
+            if(isAvailableQueen(depth)){
+                dfs(depth + 1);
+            }
+        }
+    }
+
+    public static boolean isAvailableQueen(int depth) {
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[depth] == arr[i]) {
+                return false;
+            }
+            else if(Math.abs(depth - i) == Math.abs(arr[depth] - arr[i])) {
+                return false;
+            }
+        }
+        return true;
     }
 }
